@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Telegram Web App</title>
+
+    <!-- Подключаем Telegram Web App API -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f2f5;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        button {
+            padding: 12px 24px;
+            background: #2481cc;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Привет!</h1>
+    <p>Это моё первое Telegram Web App</p>
+
+    <button onclick="showMessage()">Нажми меня</button>
+
+    <script>
+        const tg = window.Telegram.WebApp;
+
+        tg.ready();
+        tg.expand();
+
+        function showMessage() {
+            alert("Привет из Telegram Web App!");
+        }
+    </script>
+
+</body>
+</html>
